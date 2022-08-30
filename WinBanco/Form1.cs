@@ -198,11 +198,60 @@ namespace WinBanco
             {
                 this.Close();
             }
+
         }
 
-        private bool Validar()
+        public bool Validar()
         {
-            return true;
+            bool validacion=true;
+            if(txtApellido.Text==String.Empty)
+
+            {
+                MessageBox.Show("Debe colocar un apellido al cliente", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gbCliente.Enabled = true;
+                txtApellido.Focus();
+                validacion=false;
+            }
+            if (txtNombre.Text==String.Empty)
+            {
+                MessageBox.Show("Debe colocar un nombre al cliente", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gbCliente.Enabled = true;
+                txtNombre.Focus();
+                validacion = false;
+            }
+            if (txtDni.Text==String.Empty)
+            {
+                MessageBox.Show("Debe colocar un dni al cliente", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gbCliente.Enabled = true;
+                txtDni.Focus();
+
+                validacion = false;
+            }
+            if(cmbTipoCuenta.SelectedIndex==-1)
+            {
+                MessageBox.Show("Debe colocar un tipo de cuenta", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gbCuenta.Enabled = true;
+                cmbTipoCuenta.Focus();
+                validacion = false;
+            }
+            if (txtCbu.Text==String.Empty)
+            {
+                MessageBox.Show("Debe colocar el numero de CBU de la cuenta", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gbCuenta.Enabled = true;
+                txtCbu.Focus();
+                validacion = false;
+            }
+            if (!cmbCliente.Text.Equals(txtApellido.Text + "," + txtNombre.Text))
+            {
+                MessageBox.Show("la cuenta debe estar asociada a un cliente", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gbCuenta.Enabled = true;
+                cmbCliente.Focus();
+                validacion = false;
+
+            }
+
+
+            return validacion;
         }
 
         private void btnRegistrarCliente_Click(object sender, EventArgs e)

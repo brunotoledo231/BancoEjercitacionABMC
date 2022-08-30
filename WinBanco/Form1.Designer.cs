@@ -47,12 +47,6 @@
             this.lblSaldo = new System.Windows.Forms.Label();
             this.lblTipoCuenta = new System.Windows.Forms.Label();
             this.dgvCuentas = new System.Windows.Forms.DataGridView();
-            this.btnRegistrarCliente = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnRegistrarCuenta = new System.Windows.Forms.Button();
             this.colCbu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +54,12 @@
             this.colDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSaldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUltMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRegistrarCliente = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnRegistrarCuenta = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
             this.gbCuenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
@@ -245,10 +245,57 @@
             this.dgvCuentas.Location = new System.Drawing.Point(12, 193);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
-            this.dgvCuentas.Size = new System.Drawing.Size(492, 124);
+            this.dgvCuentas.Size = new System.Drawing.Size(492, 299);
             this.dgvCuentas.TabIndex = 5;
             this.dgvCuentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuentas_CellClick);
             this.dgvCuentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuentas_CellContentClick);
+            // 
+            // colCbu
+            // 
+            this.colCbu.HeaderText = "CBU";
+            this.colCbu.Name = "colCbu";
+            this.colCbu.ReadOnly = true;
+            this.colCbu.Width = 50;
+            // 
+            // colNomTipo
+            // 
+            this.colNomTipo.HeaderText = "Tipo Cuenta";
+            this.colNomTipo.Name = "colNomTipo";
+            this.colNomTipo.ReadOnly = true;
+            this.colNomTipo.Width = 80;
+            // 
+            // colApe
+            // 
+            this.colApe.HeaderText = "Apellido";
+            this.colApe.Name = "colApe";
+            this.colApe.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colDni
+            // 
+            this.colDni.HeaderText = "DNI";
+            this.colDni.Name = "colDni";
+            this.colDni.ReadOnly = true;
+            this.colDni.Width = 70;
+            // 
+            // colSaldo
+            // 
+            this.colSaldo.HeaderText = "Saldo";
+            this.colSaldo.Name = "colSaldo";
+            this.colSaldo.ReadOnly = true;
+            this.colSaldo.Width = 50;
+            // 
+            // colUltMov
+            // 
+            this.colUltMov.HeaderText = "Ult.Movimiento";
+            this.colUltMov.Name = "colUltMov";
+            this.colUltMov.ReadOnly = true;
+            this.colUltMov.Width = 30;
             // 
             // btnRegistrarCliente
             // 
@@ -310,58 +357,11 @@
             this.btnRegistrarCuenta.UseVisualStyleBackColor = true;
             this.btnRegistrarCuenta.Click += new System.EventHandler(this.btnRegistrarCuenta_Click);
             // 
-            // colCbu
-            // 
-            this.colCbu.HeaderText = "CBU";
-            this.colCbu.Name = "colCbu";
-            this.colCbu.ReadOnly = true;
-            this.colCbu.Width = 50;
-            // 
-            // colNomTipo
-            // 
-            this.colNomTipo.HeaderText = "Tipo Cuenta";
-            this.colNomTipo.Name = "colNomTipo";
-            this.colNomTipo.ReadOnly = true;
-            this.colNomTipo.Width = 80;
-            // 
-            // colApe
-            // 
-            this.colApe.HeaderText = "Apellido";
-            this.colApe.Name = "colApe";
-            this.colApe.ReadOnly = true;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            // 
-            // colDni
-            // 
-            this.colDni.HeaderText = "DNI";
-            this.colDni.Name = "colDni";
-            this.colDni.ReadOnly = true;
-            this.colDni.Width = 70;
-            // 
-            // colSaldo
-            // 
-            this.colSaldo.HeaderText = "Saldo";
-            this.colSaldo.Name = "colSaldo";
-            this.colSaldo.ReadOnly = true;
-            this.colSaldo.Width = 50;
-            // 
-            // colUltMov
-            // 
-            this.colUltMov.HeaderText = "Ult.Movimiento";
-            this.colUltMov.Name = "colUltMov";
-            this.colUltMov.ReadOnly = true;
-            this.colUltMov.Width = 30;
-            // 
             // frmCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 329);
+            this.ClientSize = new System.Drawing.Size(600, 504);
             this.Controls.Add(this.btnRegistrarCuenta);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.dgvCuentas);
